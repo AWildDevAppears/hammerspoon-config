@@ -23,13 +23,17 @@ hs.hotkey.bind(KPhyper, '§', alttab.switchDev)
 hs.hotkey.bind(KPhyper, 'tab', alttab.switch)
 -- Window manager
 hs.hotkey.bind(KPhyper, "Left", windowmgr.snapLeft)
-hs.hotkey.bind(KPhypershift, "Left", windowmgr.nudgeLeft)
 hs.hotkey.bind(KPhyper, "Right", windowmgr.snapRight)
-hs.hotkey.bind(KPhypershift, "Right", windowmgr.nudgeRight)
 hs.hotkey.bind(KPhyper, "Down", windowmgr.snapDown)
-hs.hotkey.bind(KPhypershift, "Down", windowmgr.snapMiddle)
 hs.hotkey.bind(KPhyper, "Up", windowmgr.snapUp)
-hs.hotkey.bind(KPhypershift, "Up", windowmgr.fullscreen)
+
+hs.hotkey.bind(KPhypershift, "Left", windowmgr.nudgeLeft)
+hs.hotkey.bind(KPhypershift, "Right", windowmgr.nudgeRight)
+hs.hotkey.bind(KPhypershift, "Down", windowmgr.nudgeDown)
+hs.hotkey.bind(KPhypershift, "Up", windowmgr.nudgeUp)
+
+hs.hotkey.bind(KPhyper, "pageup", windowmgr.fullscreen)
+hs.hotkey.bind(KPhyper, "pagedown", windowmgr.snapMiddle)
 -- Reload
 hs.hotkey.bind(KPhypershift, "r", hs.reload)
 

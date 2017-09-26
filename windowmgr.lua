@@ -1,3 +1,5 @@
+local NUDGE_AMOUNT = 50
+
 local windowmgr = {}
 
 function getFrameAndMaxFromWindow(win, setDefaults)
@@ -74,7 +76,7 @@ function windowmgr.nudgeLeft()
   local win = hs.window.focusedWindow()
   local f, max = getFrameAndMaxFromWindow(win, false)
 
-  f.x = f.x - 50
+  f.x = f.x - NUDGE_AMOUNT
   win:setFrame(f)
 end
 
@@ -82,7 +84,23 @@ function windowmgr.nudgeRight()
   local win = hs.window.focusedWindow()
   local f, max = getFrameAndMaxFromWindow(win, false)
 
-  f.x = f.x + 50
+  f.x = f.x + NUDGE_AMOUNT
+  win:setFrame(f)
+end
+
+function windowmgr.nudgeUp()
+  local win = hs.window.focusedWindow()
+  local f, max = getFrameAndMaxFromWindow(win, false)
+
+  f.y = f.y - NUDGE_AMOUNT
+  win:setFrame(f)
+end
+
+function windowmgr.nudgeDown()
+  local win = hs.window.focusedWindow()
+  local f, max = getFrameAndMaxFromWindow(win, false)
+
+  f.y = f.y + NUDGE_AMOUNT
   win:setFrame(f)
 end
 
