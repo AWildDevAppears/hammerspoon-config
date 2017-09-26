@@ -35,11 +35,11 @@ hs.hotkey.bind(KPhypershift, "Up", windowmgr.nudgeUp)
 hs.hotkey.bind(KPhyper, "pageup", windowmgr.fullscreen)
 hs.hotkey.bind(KPhyper, "pagedown", windowmgr.snapMiddle)
 -- Reload
-hs.hotkey.bind(KPhypershift, "r", hs.reload)
+hs.hotkey.bind(KPhypershift, "R", hs.reload)
 
 -- Anycomplete
 local anycomplete = require "anycomplete/anycomplete"
-anycomplete.registerDefaultBindings()
+anycomplete.registerDefaultBindings() -- Hyper - G
 
 
 local configWatcher
