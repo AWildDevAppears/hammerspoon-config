@@ -15,7 +15,9 @@ local alttab = require "alttab"
 -- Spotify
 hs.hotkey.bind(KPhypershift, "S", spotify.playing)
 hs.hotkey.bind(KPhypershift, "D", spotify.next)
+hs.hotkey.bind(KPhyper, "D", spotify.nextNotify)
 hs.hotkey.bind(KPhypershift, "A", spotify.previous)
+hs.hotkey.bind(KPhyper, "A", spotify.previousNotify)
 hs.hotkey.bind(KPhypershift, "W", spotify.toggle)
 --AltTab
 hs.hotkey.bind(KPhypershift, "§", alttab.changeFocus)

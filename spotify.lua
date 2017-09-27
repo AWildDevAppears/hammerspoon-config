@@ -20,8 +20,23 @@ function spotify.playing()
     local album = hs.spotify.getCurrentAlbum()
     local artist = hs.spotify.getCurrentArtist()
     local track = hs.spotify.getCurrentTrack()
+    local message = "Now playing: \n" .. artist .. " - " .. track .. " - " .. album
 
-    hs.alert.show("Now playing: \n" .. artist .. " - " .. track .. " - " .. album)
+    if hs.spotify.isPlaying() ~= true then
+        message = message .. "\n Paused"
+    end
+
+    hs.alert.show(message)
+end
+
+function spotify.nextNotify()
+    spotify.next()
+    hs.timer.doAfter(0.5, spotify.playing)
+end
+
+function spotify.previousNotify()
+    spotify.previous()
+    hs.timer.doAfter(0.5, spotify.playing)
 end
 
 return spotify
