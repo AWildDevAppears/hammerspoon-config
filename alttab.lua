@@ -2,10 +2,10 @@
 local application = require "hs.application"
 local alttab = {}
 
-local devSwitcher = hs.window.switcher.new{"Google Chrome", "Code", "iTerm2", "Slack", "Android Studio", "Xcode"}
+local devSwitcher = hs.window.switcher.new{"Google Chrome", "Gitx", "Code", "iTerm2", "Slack", "Android Studio", "Xcode", "PhpStorm"}
 local switcher = hs.window.switcher.new()
 
-hs.window.switcher.ui.fontName = "Lato"
+hs.window.switcher.ui.fontName = "FuraCode Nerd Font Mono"
 hs.window.switcher.ui.thumbnailSize = 64
 
 
