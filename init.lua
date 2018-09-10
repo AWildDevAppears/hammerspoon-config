@@ -9,6 +9,8 @@ hs.loadSpoon("HeadphoneAutoPause"):start()
 local windowmgr = require "windowmgr"
 local spotify = require "spotify"
 local alttab = require "alttab"
+local clock = require "clock"
+local audio = require "audio"
 
 
 -- Keybindings --
@@ -39,6 +41,16 @@ hs.hotkey.bind(KPhyper, "pagedown", windowmgr.snapMiddle)
 -- Reload
 hs.hotkey.bind(KPhypershift, "R", hs.reload)
 
+-- Time
+hs.hotkey.bind(KPhypershift, "Q", clock.getTime)
+hs.hotkey.bind(KPhypershift, "E", clock.toggleTimer)
+
+-- Audio
+hs.hotkey.bind(KPhyper, "1", audio.volDown5)
+hs.hotkey.bind(KPhyper, "2", audio.volUp5)
+hs.hotkey.bind(KPhypershift, "1", audio.volDown10)
+hs.hotkey.bind(KPhypershift, "2", audio.volUp10)
+
 -- Anycomplete
 local anycomplete = require "anycomplete/anycomplete"
 anycomplete.registerDefaultBindings() -- Hyper - G
@@ -64,3 +76,5 @@ configWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reload
 
 -- Watchers
 configWatcher:start()
+local anycomplete = require "anycomplete/anycomplete"
+anycomplete.registerDefaultBindings()
