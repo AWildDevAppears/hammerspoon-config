@@ -3,7 +3,39 @@ KPhyper = {"cmd", "alt", "ctrl"}
 KPhypershift = {"cmd", "alt", "ctrl", "shift"}
 
 -- Spoons
-hs.loadSpoon("HeadphoneAutoPause"):start()
+hs.loadSpoon("SpoonInstall")
+
+spoon.SpoonInstall.repos.zzspoons = {
+    url = "https://github.com/zzamboni/zzSpoons",
+    desc = "zzamboni's spoon repository",
+  }
+
+  spoon.SpoonInstall.use_syncinstall = true
+
+  Install=spoon.SpoonInstall
+
+  Install:andUse("HeadphoneAutoPause", {
+    start = true
+  })
+
+  Install:andUse("Seal",
+    {
+        hotkeys = { show = { KPhypershift, "space" } },
+        fn = function(s)
+        s:loadPlugins({"apps", "calc", "safari_bookmarks", "screencapture", "useractions"})
+        s.plugins.safari_bookmarks.always_open_with_safari = false
+        s.plugins.useractions.actions =
+            {
+                ["Hammerspoon docs webpage"] = {
+                url = "http://hammerspoon.org/docs/",
+                icon = hs.image.imageFromName(hs.image.systemImageNames.ApplicationIcon),
+                },
+            }
+        s:refreshAllCommands()
+        end,
+        start = true,
+    }
+)
 
 -- Custom modules
 local windowmgr = require "windowmgr"
