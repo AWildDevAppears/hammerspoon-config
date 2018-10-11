@@ -20,7 +20,7 @@ spoon.SpoonInstall.repos.zzspoons = {
 
   Install:andUse("Seal",
     {
-        hotkeys = { show = { KPhypershift, "space" } },
+        hotkeys = { show = { { "cmd" }, "space" } },
         fn = function(s)
         s:loadPlugins({"apps", "calc", "safari_bookmarks", "screencapture", "useractions"})
         s.plugins.safari_bookmarks.always_open_with_safari = false
