@@ -3,7 +3,7 @@ local clock = {}
 clock.startTime = 0
 
 function clock.getTime()
-    hs.alert.show(os.date("%b %d - %I:%M"))
+    hs.alert.show(os.date("%b %d - %H:%M"))
 end
 
 function clock.toggleTimer()
