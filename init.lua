@@ -99,10 +99,20 @@ hs.hotkey.bind(KPhyper, "Right", windowmgr.snapRight)
 hs.hotkey.bind(KPhyper, "Down", windowmgr.snapDown)
 hs.hotkey.bind(KPhyper, "Up", windowmgr.snapUp)
 
+hs.hotkey.bind(KPhyper, "H", windowmgr.snapLeft)
+hs.hotkey.bind(KPhyper, "L", windowmgr.snapRight)
+hs.hotkey.bind(KPhyper, "J", windowmgr.snapDown)
+hs.hotkey.bind(KPhyper, "K", windowmgr.snapUp)
+
 hs.hotkey.bind(KPhypershift, "Left", windowmgr.nudgeLeft)
 hs.hotkey.bind(KPhypershift, "Right", windowmgr.nudgeRight)
 hs.hotkey.bind(KPhypershift, "Down", windowmgr.nudgeDown)
 hs.hotkey.bind(KPhypershift, "Up", windowmgr.nudgeUp)
+
+hs.hotkey.bind(KPhyper, "H", windowmgr.nudgeLeft)
+hs.hotkey.bind(KPhyper, "L", windowmgr.nudgeRight)
+hs.hotkey.bind(KPhyper, "J", windowmgr.nudgeDown)
+hs.hotkey.bind(KPhyper, "K", windowmgr.nudgeUp)
 
 hs.hotkey.bind(KPhyper, "pageup", windowmgr.fullscreen)
 hs.hotkey.bind(KPhyper, "pagedown", windowmgr.snapMiddle)
