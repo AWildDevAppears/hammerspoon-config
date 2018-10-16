@@ -27,8 +27,44 @@ spoon.SpoonInstall.repos.zzspoons = {
         s.plugins.useractions.actions =
             {
                 ["Hammerspoon docs webpage"] = {
-                url = "http://hammerspoon.org/docs/",
-                icon = hs.image.imageFromName(hs.image.systemImageNames.ApplicationIcon),
+                    url = "http://hammerspoon.org/docs/",
+                    icon = hs.image.imageFromName(hs.image.systemImageNames.ApplicationIcon),
+                },
+                ['Trash'] = {
+                    fn = function()
+                        hs.sound.getByFile("/System/Library/Components/CoreAudio.component/Contents/SharedSupport/SystemSounds/finder/empty trash.aif"):play()
+                        os.execute("/bin/rm -rf ~/.Trash/*")
+                    end,
+                },
+                ['S'] = {
+                    fn = function()
+                        hs.application.open('Spotify')
+                    end,
+                },
+                ['C'] = {
+                    fn = function()
+                        hs.application.open('Code')
+                    end,
+                },
+                ['X'] = {
+                    fn = function()
+                        hs.application.open('Xcode')
+                    end,
+                },
+                ['F'] = {
+                    fn = function()
+                        hs.application.open('Fork')
+                    end,
+                },
+                ['I'] = {
+                    fn = function()
+                        hs.application.open('Iterm')
+                    end,
+                },
+                ['G'] = {
+                    fn = function()
+                        hs.application.open('Google Chrome')
+                    end,
                 },
             }
         s:refreshAllCommands()
